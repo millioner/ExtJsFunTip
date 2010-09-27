@@ -1,0 +1,90 @@
+.error, .success {
+    margin: 1em 0;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+#logo {
+	height: 16px;
+	margin: 0 5px;
+	background: url(/img/softalent.png) no-repeat center right;
+}
+
+#idleNote {
+	font-size: 14px;
+	text-align: center;
+	margin: 5px;
+	padding: 40px 20px 40px 70px;
+	background: url(/img/clock.png) no-repeat center left;
+}
+
+.msg .x-box-mc {
+    font-size:14px;
+}
+#msg-div {
+    position:absolute;
+    left:45%;
+    top:10px;
+    width:250px;
+    z-index:20000;
+}
+
+/****** SEXY TOOLTIP *********/
+.tooltip-wrapper {
+    position: absolute;
+    left: 45%;
+    top: 0;
+    min-width: 250px;
+    z-index: 20000;
+    display: none;
+}
+
+    .tooltip-wrapper img { position: absolute; top: 3px; left: 0; }
+    .tooltip-wrapper .close-img{ position: absolute; top: 6px; right: 21px; cursor: pointer; }
+
+    .tooltip-wrapper .tooltip {
+        border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+        font-family: Calibri, Tahoma, Geneva, sans-serif;
+        min-width: 200px;
+        max-width: 500px;
+        padding: 5px 25px 5px 30px;
+        min-height: 40px;
+        margin: 3px 0 0 24px;
+    }
+
+        .tooltip-wrapper .tooltip em {
+            font-family: Candara, Tahoma, Geneva, sans-serif;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            font-style: italic;
+        }
+
+        #tooltip-invalid-fields {
+            display: none;
+            font-size: 14px;
+            padding: 10px 0 0 10px;
+            color: #7a4242;
+            line-height: 23px;
+        }
+            #tooltip-invalid-fields span { font-weight: bold; }
+
+        .tooltip-details {
+            display: block;
+            float: right;
+            color: #AA1111;
+            font-size: 12px;
+        }
+
+    .classic {background: #FFFFAA; border: 1px solid #FFAD33; }
+    .critical { background: #FFCCAA; border: 1px solid #FF3334;	}
+    .help { background: #9FDAEE; border: 1px solid #2BB0D7;	}
+    .info { background: #9FDAEE; border: 1px solid #2BB0D7;	}
+    .warning { background: #FFFFAA; border: 1px solid #FFAD33; }
