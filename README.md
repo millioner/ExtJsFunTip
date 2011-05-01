@@ -44,4 +44,6 @@ Where `response.result.errors` is an array of objects. For example:
         }
     ]
 
-So, `id` is a field name that contains an error and `msg` is an error message. There is no `id` the last array item, it is okay - just general error message with no connection to some field.
+So, `id` is a field name that contains an error and `msg` is an error message. 
+
+There is no `id` in the last array item, it is okay - just general error message with no connection to some field.
