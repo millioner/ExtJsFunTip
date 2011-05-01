@@ -14,14 +14,14 @@ or
 2. Copy `js`, `css` and `image` folders to project and include `css/tooltip.css` and `js/tooltip.js` to your html page
 3. Profit!!!
 
-*Displaying success message*
+##Displaying success message
     Ext.Tips.msg('Success', 'Operation was completed');
 
-*Displaying error message*
+##Displaying error message
     Ext.Tips.popup(Ext.Tips.CRITICAL, 'Unable to delete user.');
-You can also use `Ext.Tips.WARNING`, `Ext.Tips.INFO` or `Ext.Tips.HELP`
+You can also use `Ext.Tips.WARNING`, `Ext.Tips.INFO` or `Ext.Tips.HELP` for different styling
 
-*And displaying form errors*
+##And displaying form errors
 Some times we have tabs inside a form, and user cannot see validation error at unactive tabs. So you can show it with tooltip:
     Ext.Tips.formErrors(form);
 
