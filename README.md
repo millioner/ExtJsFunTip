@@ -29,6 +29,7 @@ Also you can display validation errors, which was returned from the server:
     Ext.Tips.formErrors(form, response.result.errors);
 
 Where `response.result.errors` is an array of objects. For example:
+
     [
         {
             "id": "email",
@@ -42,4 +43,5 @@ Where `response.result.errors` is an array of objects. For example:
             "msg": "You have no rights for adding new users"
         }
     ]
+
 So, `id` is a field name that contains an error and `msg` is an error message. There is no `id` the last array item, it is okay - just general error message with no connection to some field.
