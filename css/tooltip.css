@@ -11,17 +11,18 @@
 }
 
 #logo {
-	height: 16px;
-	margin: 0 5px;
-	background: url(/img/softalent.png) no-repeat center right;
+    display: block;
+    height: 16px;
+    margin: 0 5px;
+    background: url(http://www.softalent.com/shared/softalent-16px.png) no-repeat center right;
 }
 
 #idleNote {
-	font-size: 14px;
-	text-align: center;
-	margin: 5px;
-	padding: 40px 20px 40px 70px;
-	background: url(/img/clock.png) no-repeat center left;
+    font-size: 14px;
+    text-align: center;
+    margin: 5px;
+    padding: 40px 20px 40px 70px;
+    background: url(../img/clock.png) no-repeat center left;
 }
 
 .msg .x-box-mc {
@@ -88,3 +89,35 @@
     .help { background: #9FDAEE; border: 1px solid #2BB0D7;	}
     .info { background: #9FDAEE; border: 1px solid #2BB0D7;	}
     .warning { background: #FFFFAA; border: 1px solid #FFAD33; }
+
+* + html #IaOrgMainPanel .x-panel-body  {position: relative}
+* + html #IaOrgMainPanel .x-tab-panel-body {position: relative}
+
+.custom_image { width: 150px; position: relative; }
+    .custom_image img { max-height: 150px; max-width: 150px; }
+    .custom_image a {
+        position: absolute;
+        top: 3px;
+        width: 16px;
+        height: 16px;
+        visibility: hidden;
+        display: block;
+        text-decoration: none;
+    }
+
+    .custom_image a.remove_pic {
+        display: none;
+        left: 22px;
+        background: url('../ext/resources/images/default/shared/icons/fam/picture_delete.png') no-repeat center;
+    }
+
+    .custom_image a.change_pic {
+        left: 3px;
+        background: url('../ext/resources/images/default/shared/icons/fam/picture_edit.png') no-repeat center;
+    }
+
+    .custom_image a:hover, .custom_image:hover a { visibility: visible; }
+
+.visitor-photo-box { float: left; width: 150px; }
+    .visitor-photo-box img { max-width: 50px; max-height: 50px; display: none; float: left; }
+    .visitor-photo-box a { display: block; float: right; font-size: 15px; padding: 10px 0 0; }

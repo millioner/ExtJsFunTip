@@ -9,10 +9,10 @@ Ext.Tips = function(){
                 '</div>'].join('');
     }
 
-    function createToolTip(class, message, title, closable){
+    function createToolTip(type, message, title, closable){
         return ['<div class="tooltip-wrapper">',
-            '<img src="/img/tooltip/', class, '.png" alt="', class, '" height="48" width="48" />',
-            '<div class="tooltip ', class, '">',
+            '<img src="/img/tooltip/', type, '.png" alt="', type, '" height="48" width="48" />',
+            '<div class="tooltip ', type, '">',
             (title ? '<em>' + title + '</em>' : ''),
             message,
             '</div>',
@@ -47,25 +47,25 @@ Ext.Tips = function(){
 
         /**
          * show one of the sexy tooltips
-         * @param class
+         * @param type
          * @param message
          * @param title
          */
-        tooltip: function(class, message, title){
+        tooltip: function(type, message, title){
             Ext.Tips.removeAllTips();
-            var m = Ext.DomHelper.insertHtml('afterBegin', document.body, createToolTip(class, message, title));
+            var m = Ext.DomHelper.insertHtml('afterBegin', document.body, createToolTip(type, message, title));
             Ext.get(m).slideIn('t').pause(2).ghost("t", {remove:true});
         },
 
         /**
          * show one of the sexy tooltips with close button
-         * @param class
+         * @param type
          * @param message
          * @param title
          */
-        popup: function(class, message, title){
+        popup: function(type, message, title){
             Ext.Tips.removeAllTips();
-            var m = Ext.DomHelper.insertHtml('afterBegin', document.body, createToolTip(class, message, title, true));
+            var m = Ext.DomHelper.insertHtml('afterBegin', document.body, createToolTip(type, message, title, true));
             m = Ext.get(m);
             m.slideIn('t').pause(20).ghost("t", {remove:true});
         },
@@ -102,7 +102,7 @@ Ext.Tips = function(){
             for(var i = 0; i < messages.length; i++){
                 if(messages[i].id){
                     var field_name = form.getForm().findField(messages[i].id);
-                    if(field_name){
+                    if(field_name && field_name.initialConfig.fieldLabel){
                         field_name = field_name.initialConfig.fieldLabel + ': ';
                     } else {
                         field_name = '';
